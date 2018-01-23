@@ -1,0 +1,18 @@
+@import "../variables.scss";
+
+.underline-radio {
+  font-size: 14px;
+  line-height: 17px;
+  margin-bottom: 20px;
+  input[type=radio] {
+    display: none;
+    &:checked + label {
+      border-bottom: 2px solid $green-hard;
+    }
+  }
+  label {
+    margin-right: 20px;
+    padding: 9px;
+    border-bottom: 2px solid transparent;
+  }
+}

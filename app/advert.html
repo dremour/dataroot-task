@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/main.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script
+            src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+            integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+    <div class="advert col__b_7 col__x_7">
+        <div class="advert__left col__b_6 col__x_6 col__s_12">
+            <h2>Оставить заявку</h2>
+            <p class="col__x_10 col__b_10">Нет времени искать по сайту?
+                Заполняй критерии поиска и получай  акутальные объявления как только они  появляются на Metrovka.</p>
+        </div>
+        <div class="advert__right col__b_6 col__x_6 col__s_12">
+            <div class="underline-radio underline-radio_center row__b_left row__x_left">
+                <input id="district" type="radio" name="ad" value="communicate" checked>
+                <label for="district">Район</label>
+                <input id="metro" type="radio" name="ad" value="communicate">
+                <label for="metro">Метро</label>
+            </div>
+            <div class="delivery_block" id='one'>
+                <div id="two" class="dropdown-wrapper" tabindex="1">
+                    <span class="dropdown-wrapper__span-city">Голосеевский</span><i class="dropdown-icon fa fa-caret-down"></i>
+                    <ul class="dropdown">
+                        <li class="dropdown__element_city">Соломенский</li>
+                        <li class="dropdown__element_city">Печерский</li>
+                        <li class="dropdown__element_city">Оболонский</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col__x_12 col__b_12 col__s_12 header__rooms_advert">
+                <p class="header__choose-room_advert">Кол-во комнат</p>
+                <div class="choose__room">
+                    <form>
+                        <label class="check__room"><input type="checkbox"  value="1" name="k"><span class="check__room_1a"></span></label>
+                        <label class="check__room"><input type="checkbox"  value="2" name="k"><span class="check__room_2a"></span></label>
+                        <label class="check__room"><input type="checkbox"  value="3" name="k"><span class="check__room_3a"></span></label>
+                        <label class="check__room"><input type="checkbox"  value="4" name="k"><span class="check__room_4a"></span></label>
+                        <label class="check__room"><input type="checkbox"  value="5" name="k"><span class="check__room_5a"></span></label>
+                    </form>
+                </div>
+            </div>
+            <form>
+                <input class="textarea col__x_12 col__b_12 col__s_12" type="text" name="name" placeholder="Как вас зовут?"/>
+                <input class="textarea col__x_12 col__b_12 col__s_12" type="email" name="email" placeholder="Email"/>
+                <input class="button__primary__normal_block col__x_12 col__b_12" type="submit" name="submit" value="Оставить заявку"/>
+            </form>
+      </div>
+    </div>
+</body>
+</html>

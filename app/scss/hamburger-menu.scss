@@ -1,0 +1,42 @@
+@import 'grid.scss';
+@import 'variables.scss';
+
+.hamburger-menu {
+  display: none;
+  i {
+    font-size: 20px;
+    position: relative;
+    top: 20px;
+    right: 20px;
+    z-index: 15;
+    color: #FFFFFF;
+  }
+  i.active {
+    display: none;
+  }
+
+}
+
+.hamburger-menu__content {
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  display: none;
+}
+.hamburger-menu__content.active  {
+  position: fixed;
+  display: block;
+  z-index: 20;
+  padding: 25px 35px;
+  background: rgba(90, 104, 114, 0.5);
+}
+.blur {
+  filter: blur(8px);
+}
+.hideoverflow {
+  overflow: hidden;
+}
+.row__hamburger {
+  @include row;
+  justify-content: flex-start;
+}

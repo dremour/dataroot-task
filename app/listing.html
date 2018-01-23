@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Document</title>
+   
+    <link rel="stylesheet" href="css/main.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src=""></script>
+    <script
+      src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+      integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+      crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCeUJ3ychzXnEvon-IJVcgTVnCgYW7BrCk"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+<div class="hamburger-menu__content">
+    <div class="hamburger-menu">
+        <i class="fa fa-bars hamburger-menu__icon" aria-hidden="true"></i>
+    </div>
+    <div class="row__hamburger">
+        <div class="col__s_2">
+            <a href="index.html">
+                <img src="../dist/img/logo-head.png" alt="logo" style="margin: 10px"/>
+            </a>
+        </div>
+        <div class="col__s_10">
+            <ul>
+                <li class="mobile-nav__item"><a href="#">Аренда</a></li>
+                <li class="mobile-nav__item"><a href="#">Продажа</a></li>
+                <li class="mobile-nav__item"><a href="#">Посуточно</a></li>
+                <li class="mobile-nav__item"><a href="#">Блог</a></li>
+                <li class="mobile-nav__item"><a href="#">Контакты</a></li>
+                <li class="mobile-nav__item"><a href="#">Новый поиск</a></li>
+                <li class="nav__item nav__item_advert col__s_7"><a href="#">Разместить объявление</a></li>
+                <li class="mobile-nav__item"><a href="#">Войти</a></li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+<div class="hamburger-menu">
+    <i class="fa fa-bars hamburger-menu__icon" aria-hidden="true"></i>
+</div>
+<div class="wrapper">
+
+<div class="header">
+    <ul class="nav">
+        <li class="nav__item nav__item_logo"><a href="index.html"><img src="../dist/img/logo-head.png" alt="logo"/></a></li>
+        <li class="nav__item"><a href="#">Аренда</a></li>
+        <li class="nav__item"><a href="#">Продажа</a></li>
+        <li class="nav__item"><a href="#">Посуточно</a></li>
+        <li class="nav__item nav__item_other"><a href="#">Еще</a></li>
+        <li class="nav__item nav__item_advert"><a href="advert.html">Разместить объявление</a></li>
+        <li class="nav__item nav__item_enter"><a href="#">Войти</a></li>
+    </ul>
+</div>
+<div class="container-stretched row">
+    <div class="col__b_12 col__s_12 listing__header">
+        <div class="row">
+            <div class="col__x_12 col__b_12 col__s_12">
+                <ul class="breadcrumb">
+                    <li>
+                        <a href="#">Долгосрочная аренда</a>
+                    </li>
+                    <li>
+                        <a href="#">Квартиры</a>
+                    </li>
+                    <li>
+                        <a href="#">Киев</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col__x_12 col__b_12 col__s_12 listing__heading">
+                Долгосрочная аренда квартир в Киеве
+            </div>
+            <div class="col__x_12 col__b_12 col__s_12 listing__menu">
+                <div class="row">
+                    <div class="listing__menu_left">
+                        <span>3 варианта размещения</span>
+                    </div>
+                    <div class="listing__menu_right">
+                        <div id="listing_sort" class="dropdown-wrapper__sort" tabindex="1">
+                            <span class="dropdown-wrapper__span-city">Сортировать</span><i class="dropdown-icon fa fa-caret-down"></i>
+                            <ul class="dropdown">
+                                <li class="dropdown__element_city">Львов</li>
+                                <li class="dropdown__element_city">Одесса</li>
+                                <li class="dropdown__element_city">Харьков</li>
+                            </ul>
+                        </div>
+                        <div id="listing_currency" class="dropdown-wrapper__currency" tabindex="1">
+                            <span class="dropdown-wrapper__span-city">Валюта</span><i class="dropdown-icon fa fa-caret-down"></i>
+                            <ul class="dropdown">
+                                <li class="dropdown__element_city">Львов</li>
+                                <li class="dropdown__element_city">Одесса</li>
+                                <li class="dropdown__element_city">Харьков</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row listing__content">
+        <div class="col__s_12 col__b_12 col__x_10 listing__items">
+            <div class="sell-item">
+                <div class="row">
+                    <div class="col__s_12 col__b_3 col__x_3 sell-item__img">
+                        <img src="img/room.jpg" alt="room photo">
+                    </div>
+                    <div class="col__s_12 col__b_5 col__x_5">
+                        <a class="sell-item__header col__s_12 col__b_12 col__x_12">
+                            2 комн., Дарницкий р-н, Пчелки 2б
+                        </a>
+                        <div class="sell-item__location__green col__s_12 col__b_12 col__x_12">
+                            <i class="fa fa-circle" aria-hidden="true"></i> Позняки <span>30 мин пешком</span>
+                        </div>
+                        <div class="sell-item__features col__s_12 col__b_12 col__x_12">
+                            <span class="sell-item__features__label">
+                                Особенности
+                            </span>
+                            <span class="sell-item__features__content">
+                                120 кв.м.  &bull;  этаж 1 из 5
+                            </span>
+                        </div>
+                        <div class="sell-item__text">
+                            Комунальные включены, без старой мебели, новый дом, дизайнерский ремонт, тихий район, удобная транспортная развязка, шикарный вид на Днепр.
+                        </div>
+                    </div>
+                    <div class="sell-item__right col__s_12 col__b_3 col__x_3">
+                        <div class="sell-item__price">
+                            <div class="sell-item__price__big">
+                                11 600 грн
+                            </div>
+                            <div class="sell-item__price__small">
+                                460
+                            </div>
+                            <div class="sell-item__price__currency hide_s">
+                                курс
+                            </div>
+                        </div>
+                        <div class="alert__danger sell-item__alert">
+                            <span class="alert__label">
+                                Высокая цена
+                            </span>
+                        </div>
+                        <div class="sell-item__buttons col__s_6 col__b_9 col__x_9">
+                            <button class="sell-item__buttons__call">
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+                            </button>
+                            <button class="sell-item__buttons__text">
+                                <i class="fa fa-commenting" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="sell-item__footer col__s_12 col__b_12 col__x_12">
+                    <div class="sell-item__footer__link">
+                        <span class="sell-item__footer__link__next">
+                            След. раздел
+                            <i class="fa fa-long-arrow-right sell-item__footer__link__next__arrow" 
+                                aria-hidden="true">
+                            </i>
+                        </span>
+                        <span class="sell-item__footer__link__lead">
+                            Инфраструктура
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="sell-item">
+                <div class="row">
+                    <div class="col__s_12 col__b_3 col__x_3 sell-item__img">
+                        <img src="img/room.jpg" alt="room photo">
+                    </div>
+                    <div class="col__s_12 col__b_5 col__x_5">
+                        <a class="sell-item__header col__s_12 col__b_12 col__x_12">
+                            2 комн., Оболонский р-н, Полярная 20
+                        </a>
+                        <div class="sell-item__location__blue col__s_12 col__b_12 col__x_12">
+                            <i class="fa fa-circle" aria-hidden="true"></i>
+                            Героев Днепра
+                            <span>10 мин пешком</span>
+                        </div>
+                        <div class="sell-item__features col__s_12 col__b_12 col__x_12">
+                            <span class="sell-item__features__label">
+                                Особенности
+                            </span>
+                            <span class="sell-item__features__content">
+                                78 кв.м.  &bull;  этаж 2 из 5
+                            </span>
+                        </div>
+                        <div class="sell-item__text">
+                            Без коммунальных, евроремонт, хозяева в Польше, 15 мин. до озера, кофеварка, уборщица
+                        </div>
+                    </div>
+                    <div class="sell-item__right col__s_12 col__b_3 col__x_3">
+                        <div class="sell-item__price">
+                            <div class="sell-item__price__big">
+                                10 500 грн
+                            </div>
+                            <div class="sell-item__price__small">
+                                420
+                            </div>
+                            <div class="sell-item__price__currency hide_s">
+                                курс
+                            </div>
+                        </div>
+                        <div class="alert__success sell-item__alert">
+                            <span class="alert__label">
+                                Хорошая цена
+                            </span>
+                        </div>
+                        <div class="sell-item__buttons col__s_6 col__b_9 col__x_9">
+                            <button class="sell-item__buttons__call">
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+                            </button>
+                            <button class="sell-item__buttons__text">
+                                <i class="fa fa-commenting" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="sell-item__footer col__s_12 col__b_12 col__x_12">
+                    <div class="sell-item__footer__link">
+                        <span class="sell-item__footer__link__next">
+                            След. раздел
+                            <i class="fa fa-long-arrow-right sell-item__footer__link__next__arrow" 
+                                aria-hidden="true">
+                            </i>
+                        </span>
+                        <span class="sell-item__footer__link__lead">
+                            Инфраструктура
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="sell-item">
+                <div class="row">
+                    <div class="col__s_12 col__b_3 col__x_3 sell-item__img">
+                        <img src="img/room.jpg" alt="room photo">
+                    </div>
+                    <div class="col__s_12 col__b_5 col__x_5">
+                        <a class="sell-item__header col__s_12 col__b_12 col__x_12">
+                            2 комн., Оболонский р-н, Полярная 20
+                        </a>
+                        <div class="sell-item__location__blue col__s_12 col__b_12 col__x_12">
+                            <i class="fa fa-circle" aria-hidden="true"></i>
+                            Героев Днепра
+                            <span>10 мин пешком</span>
+                        </div>
+                        <div class="sell-item__features col__s_12 col__b_12 col__x_12">
+                            <span class="sell-item__features__label">
+                                Особенности
+                            </span>
+                            <span class="sell-item__features__content">
+                                78 кв.м.  &bull;  этаж 1 из 5
+                            </span>
+                        </div>
+                        <div class="sell-item__text">
+                            Без коммунальных, евроремонт, хозяева в Польше, 15 мин. до озера, кофеварка, уборщица
+                        </div>
+                    </div>
+                    <div class="sell-item__right col__s_12 col__b_3 col__x_3">
+                        <div class="sell-item__price">
+                            <div class="sell-item__price__big">
+                                10 500 грн
+                            </div>
+                            <div class="sell-item__price__small">
+                                420
+                            </div>
+                            <div class="sell-item__price__currency hide_s">
+                                курс
+                            </div>
+                        </div>
+                        <div class="alert__success sell-item__alert">
+                            <span class="alert__label">
+                                Хорошая цена
+                            </span>
+                        </div>
+                        <div class="sell-item__buttons col__s_6 col__b_9 col__x_9">
+                            <button class="sell-item__buttons__call">
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+                            </button>
+                            <button class="sell-item__buttons__text">
+                                <i class="fa fa-commenting" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="sell-item__footer col__s_12 col__b_12 col__x_12">
+                    <div class="sell-item__footer__link">
+                        <span class="sell-item__footer__link__next">
+                            След. раздел
+                            <i class="fa fa-long-arrow-right sell-item__footer__link__next__arrow" 
+                                aria-hidden="true">
+                            </i>
+                        </span>
+                        <span class="sell-item__footer__link__lead">
+                            Инфраструктура
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class=" hide_s hide_b" style="width: 300px">
+        <div class="listing__map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.516823361414!2d30.521211315426463!3d50.4500999794753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTDCsDI3JzAwLjQiTiAzMMKwMzEnMjQuMiJF!5e0!3m2!1suk!2sua!4v1492267454324" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+        </div>
+    </div>
+    <div class="panel-transparent listing__footer">
+        <div class="panel-content row">
+            <div class="col__x_3 col__b_3 col__s_12">
+                <ul class="footer-list">
+                    <li><a>Metrovka</a></li>
+                    <li><a>О компании</a></li>
+                    <li><a>Пресса о нас</a></li>
+                    <li><a>Пользовательское соглашение</a></li>
+                    <li><a>Карта сайта</a></li>
+                    <li><a>Помощь</a></li>
+                </ul>
+            </div>
+            <div class="col__x_3 col__b_3 col__s_12">
+                <ul class="footer-list">
+                    <li><a>Партнерство</a></li>
+                    <li><a>Как разместить обьявление</a></li>
+                    <li><a>Инструменты продвижения</a></li>
+                    <li><a>Правила заполнения объявлений</a></li>
+                </ul>
+            </div>
+            <div class="col__b_3 col__s_12">
+                <ul class="footer-list">
+                    <li><a>Узнайте больше</a></li>
+                    <li><a>Бонусная программа Bonus+</a></li>
+                    <li><a>Telegram Metrovka Bot</a></li>
+                    <li><a>Как работает поиск</a></li>
+                    <li><a>Как пользоваться избранным</a></li>
+                </ul>
+            </div>
+            <div class="col__x_3 col__b_3 col__s_12">
+                <ul class="footer-list">
+                    <li><a>Контакты</a></li>
+                    <li class="footer-list__social">
+                        <a><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+                        <a><i class="fa fa-vk" aria-hidden="true"></i></a>
+                        <a><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    </li>
+                    <li>Ул. Жилянская, 37</li>
+                    <li><small>Киев, 01033</small></li>
+                    <li><a>info@mertrovka.ua</a></li>
+                    <li>
+                        <button class="button__primary__normal_block">
+                            Оставить заявку
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <div class="col__x_12 col__b_12 col__s_12">
+                <div class="row__center">
+                    <img src="img/logo.png" alt="logo">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+
+</body>
+</html>

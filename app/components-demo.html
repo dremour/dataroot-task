@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Document</title>
+   
+    <link rel="stylesheet" href="css/main.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src=""></script>
+    <script
+      src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+      integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+      crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+
+<div class="hamburger-menu__content">
+    <div class="hamburger-menu">
+        <i class="fa fa-bars hamburger-menu__icon" aria-hidden="true"></i>
+    </div>
+    <div class="row__hamburger">    
+        <div class="col__s_2">
+            Logo)
+        </div>
+        <div class="col__s_10">
+            Menu
+        </div>
+    </div>
+</div>
+<div class="wrapper">
+    <button class="button__primary__normal">
+        Primary button
+    </button>
+    <br><br><br>
+    <button class="button__primary__normal" disabled>
+        Primary button
+    </button>
+    disabled
+
+    <br><br><br>
+    <button class="button__secondary__normal">
+        Secondary
+    </button>
+    <br><br><br>
+    <button class="button__secondary__normal" disabled>
+        Secondary
+    </button>
+    disabled
+
+    <br><br><br>
+    <div class="hamburger-menu">
+        <i class="fa fa-bars hamburger-menu__icon" aria-hidden="true"></i>
+    </div>
+
+    <button class="button__primary__small">
+        Small primary
+    </button>
+    <br><br><br>
+    <button class="button__primary__small" disabled>
+        Small primary
+    </button>
+    disabled
+
+    <br><br><br>
+    <button class="button__secondary__small">
+        Small secondary
+    </button>
+    <br><br><br>
+    <button class="button__secondary__small" disabled>
+        Small secondary
+    </button>
+    disabled
+
+
+
+    <br><br><br>
+    <button class="button__icon__normal">
+        <span>Button label</span>
+        <i class="fa fa-plus-circle" aria-hidden="true"></i>
+    </button>
+
+
+
+    <br><br><br>
+    
+    <div id="dd" class="dropdown-wrapper" tabindex="1" style="margin: 40px">
+    <!-- Look up to /js/dropdowns.js to look how to initiate it with jQuery -->
+        <span>Transport</span><i class="dropdown-icon fa fa-caret-down"></i>
+        <ul class="dropdown">
+            <li>Classic mail</li>
+            <li>UPS Delivery</li>
+            <li>Private jet</li>
+        </ul>
+    </div>
+
+    <br><br><br>
+    <div style="margin-left: 400px">
+    <div class="overflow-menu-wrapper">
+        <i class="fa fa-ellipsis-v" area-hidden="true"></i>
+        <ul class="overflow-menu">
+            <li class="overflow-menu__li__normal">Stop app</li>
+            <li class="overflow-menu__li__normal">Restart app</li>
+            <li class="overflow-menu__li__normal">Rename app</li>
+            <li class="overflow-menu__li__normal">Edit routes and access</li>
+            <li class="overflow-menu__li__danger">Delete app</li>
+        </ul>
+    </div>
+    </div>
+    <br><br><br>
+    <div class="underline-radio">
+        <input id="male" type="radio" name="gender" value="male" checked>
+        <label for="male">Male</label>
+        <input id="female" type="radio" name="gender" value="female">
+        <label for="female">Female</label>
+    </div>
+    <br><br><br>
+    <br><br><br>
+</div>
+</body>
+
+</html>

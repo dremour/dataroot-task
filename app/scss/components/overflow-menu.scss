@@ -1,0 +1,82 @@
+@import "../variables.scss";
+
+
+@mixin overflow-menu-wrapper($iconcolor) {
+  width: 30px;
+  height: 30px;
+  i {
+    color: $iconcolor;
+    font-size: 24px;
+  }
+  .overflow-menu {
+    width: 180px;
+    position: absolute;
+    top: 145%;
+    right: -10px;
+    z-index: 15;
+    background: #FFFFFF;
+    list-style: none;
+    font-size: 14px;
+    opacity: 0;
+    li {
+      line-height: 28px;
+      display: block;
+      padding-left: 18px;
+    }
+    li.overflow-menu__li__danger{
+      &:hover {
+        background-color: $red-hard;
+        color: #FFFFFF;
+        cursor: pointer;
+      }
+    }
+    li.overflow-menu__li__normal {
+      &:hover {
+        background-color: $green-hard;
+        color: #FFFFFF;
+        cursor: pointer;
+      }
+    }
+    &:after {
+      content: "";
+      width: 0;
+      height: 0;
+      position: absolute;
+      left: 75%;
+      top: -7px;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-bottom: 7px solid white;
+    }
+    &:before {
+      content: "";
+      width: 0;
+      height: 0;
+      position: absolute;
+      left: 75%;
+      top: -9px;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-bottom: 8px solid $gray;
+    }
+  }
+}
+
+.overflow-menu-wrapper.active, 
+.overflow-menu-wrapper__white.active,
+.overflow-menu-wrapper__black.active  {
+  .overflow-menu {
+    border: inherit;
+    border: 1px solid $gray;
+    opacity: 1;
+  }
+}
+.overflow-menu-wrapper__white {
+  @include overflow-menu-wrapper(#FFFFFF);
+}
+.overflow-menu-wrapper {
+  @include overflow-menu-wrapper(black);
+}
+.overflow-menu-wrapper__black {
+  @include overflow-menu-wrapper(black);
+}

@@ -1,0 +1,68 @@
+@import 'variables.scss';
+
+@media screen and (min-width: 360px) and (max-width: 890px) {
+  .img-slide {
+    min-width: 200px;
+  }
+}
+.img-slide {
+  margin: 10px 0px;
+  padding: 0px 5px;
+  .img-slide__img {
+    img {
+      width: 100%;
+    }
+    margin-bottom: 15px;
+    position: relative;
+    .overflow-menu-wrapper__white {
+      position: absolute;
+      right: -5px;
+      top: 10px;
+      .overflow-menu {
+      }
+    }
+  }
+  .img-slide__price {
+    i {
+      color: $green-hard;
+      padding-left: 10px;
+    }
+    margin-bottom: 5px;
+  }
+  .img-slide__sm {
+    color: $gray-smallfont;
+    font-size: 12px;
+    line-height: 16px;
+    margin-bottom: 10px;
+  }
+  .img-slide__addr {
+    font-size: 12px;
+    line-height: 16px;
+    i {
+      color: $red-metro;
+      font-size: 12px;
+      margin-right: 5px;
+    }
+  }
+  @mixin img-slide__topic($fontcolor) {
+    font-size: 11px;
+    color: $fontcolor;
+    line-height: 16px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+  .img-slide__topic__hack {
+    @include img-slide__topic($lifehack);
+  }
+  .img-slide__topic__advice {
+    @include img-slide__topic($advice);
+  }
+  .img-slide__topic__tech {
+    @include img-slide__topic($tech);
+  }
+  .img-slide__title {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 20px;
+  }
+}

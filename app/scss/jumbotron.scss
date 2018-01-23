@@ -1,0 +1,30 @@
+@import 'grid.scss';
+
+.jumbotron {
+  @include panel(#FFFFFF);
+  padding: 0 20px;
+  .jumbotron__img {
+    width: 100%;
+    height: auto;
+  }
+  .jumbotron__header {
+    @extend .panel__header;
+  }
+  @media screen and (min-width: 360px) and (max-width: 890px) {
+    .row__jumbotron {
+      display: flex;
+      flex-flow: column-reverse nowrap;
+      justify-content: flex-start;
+    }
+  }
+  @media screen and (min-width: 890px) {
+    .row__jumbotron {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+    }
+  }
+  .jumbotron__button {
+    margin-top: 20px;
+  }
+}

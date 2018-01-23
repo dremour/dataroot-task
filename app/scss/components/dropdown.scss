@@ -1,0 +1,73 @@
+@import '../variables.scss';
+
+@mixin dropdown-wrapper($width, $background-color, $border, $iconcolor, $shadow) {
+  text-align: left;
+  position: relative;
+  padding: 10px;
+  min-height: 40px;
+  width: $width;
+  padding-left: 18px;
+  background-color: $background-color;
+  border: $border;
+  font-size: 14px;
+  line-height: 17px;
+  box-shadow: $shadow;
+  cursor: pointer;
+  border-radius: 2px;
+  &:focus{
+    outline: none;
+  }
+  .dropdown {
+    position: absolute;
+    top: 100%;
+    left: -2px;
+    right: 0;
+    width: 101%;
+    background-color: $background-color;
+    list-style: none;
+    opacity: 0;
+    li {
+      line-height: 40px;
+      min-height: 40px;
+      display: block;
+      padding-left: 18px;
+      &:hover {
+        background-color: $green-hard;
+        color: #FFFFFF;
+      }
+    }
+  }
+  i {
+    position: relative;
+    margin-bottom: auto;
+    margin-top: auto;
+    right: 10px;
+    font-size: 16px;
+    color: $iconcolor;
+    width: 16px;
+    height: 16px;
+    float: right;
+  }
+}
+.dropdown.disabled {
+  opacity: 0.5;
+  cursor: auto;
+}
+@mixin dropdown-wrapper_active {
+  border-color: $green-hard;
+  .dropdown {
+    border: inherit;
+    border-top: inherit;
+    opacity: 1;
+  }
+}
+.dropdown-wrapper.active {
+  @include dropdown-wrapper_active;
+}
+
+.dropdown-wrapper {
+  @include dropdown-wrapper(100%, #FFFFFF, 2px solid $gray, $green-hard, 0 1px 1px rgba(0,0,0,0.1));
+}
+.dropdown-wrapper__transparent {
+  @include dropdown-wrapper(100%, transparent, 0px solid, inherit, none);
+}

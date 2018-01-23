@@ -1,0 +1,588 @@
+<!doctype html>
+<html>
+<head lang="en" >
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Document</title>
+   
+    <link rel="stylesheet" href="css/main.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script
+      src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+      integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+      crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCeUJ3ychzXnEvon-IJVcgTVnCgYW7BrCk"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <script type="text/javascript" src="js/main.js"></script>
+
+</head>
+<body>
+<div class="hamburger-menu__content">
+    <div class="hamburger-menu">
+        <i class="fa fa-bars hamburger-menu__icon" aria-hidden="true"></i>
+    </div>
+    <div class="row__hamburger">
+        <div class="col__s_2">
+            <a href="index.html">
+                <img src="../dist/img/logo-head.png" alt="logo" style="margin: 10px"/>
+            </a>
+        </div>
+        <div class="col__s_10">
+            <ul>
+                <li class="mobile-nav__item"><a href="#">Аренда</a></li>
+                <li class="mobile-nav__item"><a href="#">Продажа</a></li>
+                <li class="mobile-nav__item"><a href="#">Посуточно</a></li>
+                <li class="mobile-nav__item"><a href="#">Блог</a></li>
+                <li class="mobile-nav__item"><a href="#">Контакты</a></li>
+                <li class="mobile-nav__item"><a href="#">Новый поиск</a></li>
+                <li class="nav__item nav__item_advert col__s_7"><a href="#">Разместить объявление</a></li>
+                <li class="mobile-nav__item"><a href="#">Войти</a></li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+<div class="hamburger-menu">
+    <i class="fa fa-bars hamburger-menu__icon" aria-hidden="true"></i>
+</div>
+<div class="wrapper">
+
+<div class="header">
+    <ul class="nav">
+        <li class="nav__item nav__item_logo"><a href="index.html"><img src="../dist/img/logo-head.png" alt="logo"/></a></li>
+        <li class="nav__item"><a href="#">Аренда</a></li>
+        <li class="nav__item"><a href="#">Продажа</a></li>
+        <li class="nav__item"><a href="#">Посуточно</a></li>
+        <li class="nav__item nav__item_other"><a href="#">Еще</a></li>
+        <li class="nav__item nav__item_advert"><a href="advert.html">Разместить объявление</a></li>
+        <li class="nav__item nav__item_enter"><a href="#">Войти</a></li>
+    </ul>
+    <h1 class="header__title">Поиск недвижимости в Украине</h1>
+
+
+    <div class="row" style="justify-content: center;">
+        <div class="col__x_5 col__b_4 col__s_12  header__cities">
+            <p class="header__choose-city">Выберите город</p>
+                <div id="two" class="dropdown-wrapper" tabindex="1">
+                    <span class="dropdown-wrapper__span-city">Киев</span><i class="dropdown-icon fa fa-caret-down"></i>
+                    <ul class="dropdown">
+                        <li class="dropdown__element_city">Львов</li>
+                        <li class="dropdown__element_city">Одесса</li>
+                        <li class="dropdown__element_city">Харьков</li>
+                    </ul>
+                </div>
+        </div>
+        <div class="col__x_4 col__b_5 col__s_12 header__rooms">
+            <p class="header__choose-room">Кол-во комнат</p>
+            <div class="choose__room">
+                <form>
+                    <label class="check__room"><input type="checkbox"  value="1" name="k"><span class="check__room_1"></span></label>
+                    <label class="check__room"><input type="checkbox"  value="2" name="k"><span class="check__room_2"></span></label>
+                    <label class="check__room"><input type="checkbox"  value="3" name="k"><span class="check__room_3"></span></label>
+                    <label class="check__room"><input type="checkbox"  value="4" name="k"><span class="check__room_4"></span></label>
+                    <label class="check__room"><input type="checkbox"  value="5" name="k"><span class="check__room_5"></span></label>
+                </form>
+            </div>
+        </div>
+        <div class="col__x_3 col__b_3 col__s_12 header__search_btn-wrapper">
+            <a href = "listing.html" class="button__secondary__normal_block">
+                Перейти к поиску
+            </a>
+        </div>
+    </div>
+</div>
+<div class="container" style="position: relative;top: -25px;">
+    <div class="jumbotron">
+        <div class="panel__body">
+            <div class="row__jumbotron">
+                <div class="col__x_6 col__s_12 col__b_6">
+                    <div class="row row__s_center row__b_left row__x_left">
+                        <div class="col__x_12 col__b_12 col__s_12">
+                            <div class="jumbotron__header">
+                            <div class="row__s_center row__b_left row__x_left">
+                                Недвижимость возле метро
+                            </div>
+                            </div>
+                        </div>
+                        <div class="col__x_12 col__b_12 col__s_12">
+                            <div class="underline-radio row__s_center row__b_left row__x_left">
+                                <div>
+                                <input id="apart2" type="radio" name="jumborad" value="apart2" checked>
+                                <label for="apart2">Квартиры</label>
+                                </div>
+                                <div>
+                                <input id="house2" type="radio" name="jumborad" value="house2">
+                                <label for="house2">Дома</label>
+                                </div>
+                                <div>
+                                <input id="office2" type="radio" name="jumborad" value="office2">
+                                <label for="office2">Офисы</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col__x_10 col__b_10 col__s_12">
+                            <div id="jumb_dd" class="dropdown-wrapper" tabindex="1">
+                                <span class="dropdown-wrapper__span" >Политехнический институт</span><i class="dropdown-icon fa fa-caret-down"></i>
+                                <ul class="dropdown">
+                                    <li class="dropdown__element">Шулявская</li>
+                                    <li class="dropdown__element">Нивки</li>
+                                    <li class="dropdown__element">Житомирская</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col__x_10 col__b_10 col__s_12 jumbotron__button">
+                            <button class="button__primary__normal_block">
+                                Показать результаты поиска
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col__x_6 col__s_12 col__b_6">
+                    <img class="jumbotron__img" src="img/metro.png" alt="metro"/>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="panel">
+        <div class="panel__header">
+            Лучшие предложения в Киеве
+        </div>
+        <div class="panel__body">
+            <div class="row__slide">
+                <div class="col__x_3 col__b_3">
+                    <div class="img-slide">
+                        <div class="img-slide__img">
+                            <img src="img/rectangle11.jpg" alt="room">
+                            <div class="overflow-menu-wrapper__white">
+                                <i class="fa fa-ellipsis-v"></i>
+                                <ul class="overflow-menu">
+                                    <li class="overflow-menu__li__normal">Stop app</li>
+                                    <li class="overflow-menu__li__normal">Restart app</li>
+                                    <li class="overflow-menu__li__normal">Rename app</li>
+                                    <li class="overflow-menu__li__normal">Edit routes and access</li>
+                                    <li class="overflow-menu__li__danger">Delete app</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="img-slide__price">
+                            11 800 грн  <i class="fa fa-check-circle" aria-hidden="true"></i>
+                        </div>
+                        <div class="img-slide__sm">
+                            2 комн. &bull; 48 кв.м.
+                        </div>
+                        <div class="img-slide__addr">
+                            <i class="fa fa-circle" aria-hidden="true"></i> Политехнический институт
+                        </div>
+                    </div>
+                </div>
+                <div class="col__x_3 col__b_3">
+                    <div class="img-slide">
+                        <div class="img-slide__img">
+                            <img src="img/rectangle11.jpg" alt="room">
+                            <div class="overflow-menu-wrapper__white">
+                                <i class="fa fa-ellipsis-v"></i>
+                                <ul class="overflow-menu">
+                                    <li class="overflow-menu__li__normal">Stop app</li>
+                                    <li class="overflow-menu__li__normal">Restart app</li>
+                                    <li class="overflow-menu__li__normal">Rename app</li>
+                                    <li class="overflow-menu__li__normal">Edit routes and access</li>
+                                    <li class="overflow-menu__li__danger">Delete app</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="img-slide__price">
+                            11 800 грн  <i class="fa fa-check-circle" aria-hidden="true"></i>
+                        </div>
+                        <div class="img-slide__sm">
+                            2 комн. &bull; 48 кв.м.
+                        </div>
+                        <div class="img-slide__addr">
+                            <i class="fa fa-circle" aria-hidden="true"></i> Политехнический институт
+                        </div>
+                    </div>
+                </div>
+                <div class="col__x_3 col__b_3">
+                    <div class="img-slide">
+                        <div class="img-slide__img">
+                            <img src="img/rectangle11.jpg" alt="room">
+                            <div class="overflow-menu-wrapper__white">
+                                <i class="fa fa-ellipsis-v"></i>
+                                <ul class="overflow-menu">
+                                    <li class="overflow-menu__li__normal">Stop app</li>
+                                    <li class="overflow-menu__li__normal">Restart app</li>
+                                    <li class="overflow-menu__li__normal">Rename app</li>
+                                    <li class="overflow-menu__li__normal">Edit routes and access</li>
+                                    <li class="overflow-menu__li__danger">Delete app</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="img-slide__price">
+                            11 800 грн  <i class="fa fa-check-circle" aria-hidden="true"></i>
+                        </div>
+                        <div class="img-slide__sm">
+                            2 комн. &bull; 48 кв.м.
+                        </div>
+                        <div class="img-slide__addr">
+                            <i class="fa fa-circle" aria-hidden="true"></i> Политехнический институт
+                        </div>
+                    </div>
+                </div>
+                <div class="col__x_3 col__b_3">
+                    <div class="img-slide">
+                        <div class="img-slide__img">
+                            <img src="img/rectangle11.jpg" alt="room">
+                            <div class="overflow-menu-wrapper__white">
+                                <i class="fa fa-ellipsis-v"></i>
+                                <ul class="overflow-menu">
+                                    <li class="overflow-menu__li__normal">Stop app</li>
+                                    <li class="overflow-menu__li__normal">Restart app</li>
+                                    <li class="overflow-menu__li__normal">Rename app</li>
+                                    <li class="overflow-menu__li__normal">Edit routes and access</li>
+                                    <li class="overflow-menu__li__danger">Delete app</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="img-slide__price">
+                            11 800 грн  <i class="fa fa-check-circle" aria-hidden="true"></i>
+                        </div>
+                        <div class="img-slide__sm">
+                            2 комн. &bull; 48 кв.м.
+                        </div>
+                        <div class="img-slide__addr">
+                            <i class="fa fa-circle" aria-hidden="true"></i> Политехнический институт
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href=""><div class="panel__footer">
+            Смотреть лучшие ценовые предложения
+        </div></a>
+    </div>
+    <div class="panel">
+        <div class="panel__header">
+            Последние обьявления в Киеве
+        </div>
+        <div class="panel__content">
+            <div class="row__center">
+                <div class="underline-radio underline-radio_center">
+                    <input id="last_post_flat" type="radio" name="last_post" value="flat" checked>
+                    <label for="last_post_flat">Квартиры</label>
+                    <input id="last_post_house" type="radio" name="last_post" value="house">
+                    <label for="last_post_house">Дома</label>
+                    <input id="last_post_office" type="radio" name="last_post" value="office">
+                    <label for="last_post_office">Офисы</label>
+                </div>
+            </div>
+            <div class="row__slide">
+                <div class="col__x_3 col__b_3">
+                    <div class="img-slide">
+                        <div class="img-slide__img">
+                            <img src="img/rectangle11.jpg" alt="room">
+                            <div class="overflow-menu-wrapper__white">
+                                <i class="fa fa-ellipsis-v"></i>
+                                <ul class="overflow-menu">
+                                    <li class="overflow-menu__li__normal">Stop app</li>
+                                    <li class="overflow-menu__li__normal">Restart app</li>
+                                    <li class="overflow-menu__li__normal">Rename app</li>
+                                    <li class="overflow-menu__li__normal">Edit routes and access</li>
+                                    <li class="overflow-menu__li__danger">Delete app</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="img-slide__price">
+                            11 800 грн  <i class="fa fa-check-circle" aria-hidden="true"></i>
+                        </div>
+                        <div class="img-slide__sm">
+                            2 комн. &bull; 48 кв.м.
+                        </div>
+                        <div class="img-slide__addr">
+                            <i class="fa fa-circle" aria-hidden="true"></i> Политехнический институт
+                        </div>
+                    </div>
+                </div>
+                <div class="col__b_3 col__x_3">
+                    <div class="img-slide">
+                        <div class="img-slide__img">
+                            <img src="img/rectangle11.jpg" alt="room">
+                            <div class="overflow-menu-wrapper__white">
+                                <i class="fa fa-ellipsis-v"></i>
+                                <ul class="overflow-menu">
+                                    <li class="overflow-menu__li__normal">Stop app</li>
+                                    <li class="overflow-menu__li__normal">Restart app</li>
+                                    <li class="overflow-menu__li__normal">Rename app</li>
+                                    <li class="overflow-menu__li__normal">Edit routes and access</li>
+                                    <li class="overflow-menu__li__danger">Delete app</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="img-slide__price">
+                            11 800 грн  <i class="fa fa-check-circle" aria-hidden="true"></i>
+                        </div>
+                        <div class="img-slide__sm">
+                            2 комн. &bull; 48 кв.м.
+                        </div>
+                        <div class="img-slide__addr">
+                            <i class="fa fa-circle" aria-hidden="true"></i> Политехнический институт
+                        </div>
+                    </div>
+                </div>
+                <div class="col__x_3 col__b_3">
+                    <div class="img-slide">
+                        <div class="img-slide__img">
+                            <img src="img/rectangle11.jpg" alt="room">
+                            <div class="overflow-menu-wrapper__white">
+                                <i class="fa fa-ellipsis-v"></i>
+                                <ul class="overflow-menu">
+                                    <li class="overflow-menu__li__normal">Stop app</li>
+                                    <li class="overflow-menu__li__normal">Restart app</li>
+                                    <li class="overflow-menu__li__normal">Rename app</li>
+                                    <li class="overflow-menu__li__normal">Edit routes and access</li>
+                                    <li class="overflow-menu__li__danger">Delete app</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="img-slide__price">
+                            11 800 грн  <i class="fa fa-check-circle" aria-hidden="true"></i>
+                        </div>
+                        <div class="img-slide__sm">
+                            2 комн. &bull; 48 кв.м.
+                        </div>
+                        <div class="img-slide__addr">
+                            <i class="fa fa-circle" aria-hidden="true"></i> Политехнический институт </div>
+                    </div>
+                </div>
+                <div class="col__x_3 col__b_3">
+                    <div class="img-slide">
+                        <div class="img-slide__img">
+                            <img src="img/rectangle11.jpg" alt="room">
+                            <div class="overflow-menu-wrapper__white">
+                                <i class="fa fa-ellipsis-v"></i>
+                                <ul class="overflow-menu">
+                                    <li class="overflow-menu__li__normal">Stop app</li>
+                                    <li class="overflow-menu__li__normal">Restart app</li>
+                                    <li class="overflow-menu__li__normal">Rename app</li>
+                                    <li class="overflow-menu__li__normal">Edit routes and access</li>
+                                    <li class="overflow-menu__li__danger">Delete app</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="img-slide__price">
+                            11 800 грн  <i class="fa fa-check-circle" aria-hidden="true"></i>
+                        </div>
+                        <div class="img-slide__sm">
+                            2 комн. &bull; 48 кв.м.
+                        </div>
+                        <div class="img-slide__addr">
+                            <i class="fa fa-circle" aria-hidden="true"></i> Политехнический институт
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href=""><div class="panel__footer">
+            Смотреть самые свежие обьявления
+        </div></a>
+    </div>
+    <div class="app">
+        <div class="app__text col__x_6 col__b_6 col_s_12">
+            <h2>Общайтесь в Telegram</h2>
+            <p>Не отвлекайтесь больше на формальности.
+                Получайте моментальные уведомления о новых обьявлениях, общайтесь без ограничений.
+            </p>
+
+        </div>
+        <div class="underline-radio underline-radio_center">
+            <input id="search" type="radio" name="com" value="communicate" checked>
+            <label for="search">Поиск недвижимости</label>
+            <input id="communicate" type="radio" name="com" value="communicate">
+            <label for="communicate">Общение с клиентами</label>
+        </div>
+    </div>
+    <div class="app__content row">
+        <div class="hide_s col__b_6 col__x_6">
+             <img class="telephone" src="img/telephone.png" alt="iphone"/>
+        </div>
+        <div class="app__connect col__b_5 col__s_12 col__x_5">
+            <div style="display: inline-flex; align-items: center" >
+                <img src="img/oval.png" alt=""/>
+                <h3 style="display: inline-block; margin: 22px; font-weight: 600"
+                        >Telegram</h3>
+            </div>
+            <div>
+                <h3 style="margin-bottom: 15px; font-weight: 600;">Metrovka Bot</h3>
+                <p class="instruction">1. Собирайте аналитику по объектам</p>
+                <p class="instruction">2. Получайте подсказки по эффективному продвижению объявлений</p>
+                <p class="instruction">3. Общайтесь с клиентами через специальный канал телекоммуникации</p>
+            </div>
+            <div>
+                <button class="button__primary_normal">
+                    Присоединится в Telegram
+                </button>
+            </div>
+        </div>
+        <div class="radio__slider col__b_2 col__x_2">
+            <input id="check" type="radio" name="radio-slider" value="" checked>
+            <label for="check"></label>
+            <input id="uncheck" type="radio" name="radio-slider" value="">
+            <label for="uncheck"></label>
+        </div>
+    </div>
+    <div class="panel">
+        <div class="panel__header">
+            Блог Metrovka
+        </div>
+        <div class="panel__body">
+            <div class="row__center">
+                <div class="panel__tagline">
+                    Хитрости, приемы, советы, фото и видео – все о том как продать, купить, сдать в аренду или арендовать недвижимость. 
+                </div>
+            </div>
+            <div class="row__center">
+                <div class="col__x_4 col__b_4 col__s_12">
+                    <div class="img-slide">
+                        <div class="img-slide__img">
+                            <img src="img/tablet.jpg" alt="tablet">
+                            <div class="overflow-menu-wrapper__white">
+                                <i class="fa fa-ellipsis-v"></i>
+                                <ul class="overflow-menu">
+                                    <li class="overflow-menu__li__normal">Stop app</li>
+                                    <li class="overflow-menu__li__normal">Restart app</li>
+                                    <li class="overflow-menu__li__normal">Rename app</li>
+                                    <li class="overflow-menu__li__normal">Edit routes and access</li>
+                                    <li class="overflow-menu__li__danger">Delete app</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="img-slide__topic__hack">
+                            лайфхак
+                        </div>
+                        <div class="img-slide__title">
+                            Киевляне могут оплатить коммуналку через Facebook...
+                        </div>
+                        <div class="img-slide__sm">
+                            Татьяна Малыняк &bull; 5 мин. чтения
+                        </div>
+                    </div>
+                </div>
+                <div class="col__x_4 col__b_4 col__s_12">
+                    <div class="img-slide">
+                        <div class="img-slide__img">
+                            <img src="img/people.jpg" alt="people">
+                            <div class="overflow-menu-wrapper__white">
+                                <i class="fa fa-ellipsis-v"></i>
+                                <ul class="overflow-menu">
+                                    <li class="overflow-menu__li__normal">Stop app</li>
+                                    <li class="overflow-menu__li__normal">Restart app</li>
+                                    <li class="overflow-menu__li__normal">Rename app</li>
+                                    <li class="overflow-menu__li__normal">Edit routes and access</li>
+                                    <li class="overflow-menu__li__danger">Delete app</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="img-slide__topic__advice">
+                            совет metrovka
+                        </div>
+                        <div class="img-slide__title">
+                            ТОП-5 самых дешвых квартир Киева
+                        </div>
+                        <div class="img-slide__sm">
+                            Татьяна Малыняк &bull; 4 мин. чтения
+                        </div>
+                    </div>
+                </div>
+                <div class="col__x_4 col__b_4 col__s_12">
+                    <div class="img-slide">
+                        <div class="img-slide__img">
+                            <img src="img/room.jpg" alt="room">
+                            <div class="overflow-menu-wrapper__white">
+                                <i class="fa fa-ellipsis-v"></i>
+                                <ul class="overflow-menu">
+                                    <li class="overflow-menu__li__normal">Stop app</li>
+                                    <li class="overflow-menu__li__normal">Restart app</li>
+                                    <li class="overflow-menu__li__normal">Rename app</li>
+                                    <li class="overflow-menu__li__normal">Edit routes and access</li>
+                                    <li class="overflow-menu__li__danger">Delete app</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="img-slide__topic__tech">
+                            технологии
+                        </div>
+                        <div class="img-slide__title">
+                            Смарт-квартиры: цены, предложения и законность
+                        </div>
+                        <div class="img-slide__sm">
+                            Татьяна Малыняк &bull; 2 мин. чтения
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href=""><div class="panel__footer">
+            Перейти на страницу блога
+        </div></a>
+    </div>
+    <div class="panel-transparent">
+        <div class="panel-content row">
+            <div class="col__x_3 col__b_3 col__s_12">
+                <ul class="footer-list">
+                    <li><a>Metrovka</a></li>
+                    <li><a>О компании</a></li>
+                    <li><a>Пресса о нас</a></li>
+                    <li><a>Пользовательское соглашение</a></li>
+                    <li><a>Карта сайта</a></li>
+                    <li><a>Помощь</a></li>
+                </ul>
+            </div>
+            <div class="col__x_3 col__b_3 col__s_12">
+                <ul class="footer-list">
+                    <li><a>Партнерство</a></li>
+                    <li><a>Как разместить обьявление</a></li>
+                    <li><a>Инструменты продвижения</a></li>
+                    <li><a>Правила заполнения объявлений</a></li>
+                </ul>
+            </div>
+            <div class="col__b_3 col__s_12">
+                <ul class="footer-list">
+                    <li><a>Узнайте больше</a></li>
+                    <li><a>Бонусная программа Bonus+</a></li>
+                    <li><a>Telegram Metrovka Bot</a></li>
+                    <li><a>Как работает поиск</a></li>
+                    <li><a>Как пользоваться избранным</a></li>
+                </ul>
+            </div>
+            <div class="col__x_3 col__b_3 col__s_12">
+                <ul class="footer-list">
+                    <li><a>Контакты</a></li>
+                    <li class="footer-list__social">
+                        <a><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+                        <a><i class="fa fa-vk" aria-hidden="true"></i></a>
+                        <a><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    </li>
+                    <li>Ул. Жилянская, 37</li>
+                    <li><small>Киев, 01033</small></li>
+                    <li><a>info@mertrovka.ua</a></li>
+                    <li>
+                        <button class="button__primary__normal_block">
+                            Оставить заявку
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <div class="col__x_12 col__b_12 col__s_12">
+                <div class="row__center">
+                    <img src="img/logo.png" alt="logo">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>
